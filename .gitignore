@@ -8,4 +8,5 @@ backend/Include
 backend/Lib
 backend/Scripts
 backend/pyvenv.cfg
-.sqlite3
+*.sqlite3
+backend/api/api/__pycache__/
