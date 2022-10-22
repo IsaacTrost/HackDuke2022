@@ -24,16 +24,14 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
-    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
-    font-size:12px;
+    background-color: #F0F8FF;
+    background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
+    font-family: system-ui, -apple-system, -apple-system-font, 'SF Pro';
     height:100vh;
     margin:0px;
-    padding:0px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-    text-transform:uppercase;
+    align-items: center;
     width:100%;
 }
 
@@ -45,7 +43,6 @@ body {
     top:50%;
     height:50px;                   /* text area height */
     width:225px;                   /* text area width */
-    text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
@@ -68,14 +65,6 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
 }
 
 .event.listening {
@@ -107,4 +96,24 @@ h1 {
     body {
         background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
     }
+}
+
+.sample-question {
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px -16px #3BA0F9;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    background-color: white;
+}
+
+.sample-question {
+    text-align: left;
+    font-size:24px;
+    font-weight: 0;
 }
