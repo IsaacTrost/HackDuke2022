@@ -10,3 +10,4 @@ backend/Scripts
 backend/pyvenv.cfg
 *.sqlite3
 backend/api/api/__pycache__/
+backend/secrets.json
