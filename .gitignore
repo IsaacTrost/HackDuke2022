@@ -4,3 +4,7 @@ deepQuestion/node_modules
 deepQuestion/package.json
 deepQuestion/package-lock.json
 deepQuestion/platforms
+backend/Include
+backend/Lib
+backend/Scripts
+backend/pyvenv.cfg
