@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
+ * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
@@ -25,7 +25,7 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color: #F0F8FF;
-    background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
+    background-image:linear-gradient(to bottom, #3BA0F9 0%, #348cd8 51%);
     font-family: system-ui, -apple-system, -apple-system-font, 'SF Pro';
     height:100vh;
     margin:0px;
