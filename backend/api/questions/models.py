@@ -10,6 +10,6 @@ class AnswerModel(models.Model):
     content = models.CharField(max_length = 500, blank=False)
 
 class UserModel(models.Model):
-    lastAnswer = models.ForeignKey(AnswerModel)
-    answers = models.ManyToManyField(AnswerModel)
+    lastAnswer = models.ForeignKey(AnswerModel, on_delete=models.CASCADE)
+    answers = models.ManyToManyField(AnswerModel, related_name='answers')
     macAddress = models.CharField(max_length = 12, blank = False)
