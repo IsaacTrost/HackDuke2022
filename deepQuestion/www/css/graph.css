@@ -159,23 +159,9 @@ h1 {
 }
 
 .righty {
-    background-image: radial-gradient(circle at 83,33% 50%, #3BA0F9, #F0F8FF);
+    background-image: radial-gradient(circle at 83.33% 50%, #3BA0F9, #F0F8FF);
 }
-.graph-switch1 > button {
-    background-color: #F0F8FF;
-    border-width: 0px;
-    border-radius: 15px;
-
-}
-
-.graph-switch2 > button {
-    background-color: #F0F8FF;
-    border-width: 0px;
-    border-radius: 15px;
-
-}
-
-.graph-switch3 > button {
+.graph-switch > button {
     background-color: #F0F8FF;
     border-width: 0px;
     border-radius: 15px;
