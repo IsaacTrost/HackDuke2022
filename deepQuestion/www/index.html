@@ -29,7 +29,6 @@
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
         <script src="https://kit.fontawesome.com/e1a8cf2c63.js" crossorigin="anonymous"></script>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -41,23 +40,32 @@
         <title>deepQuestion</title>
     </head>
     <body>
-            <div class="sample-question" >
-                <p class="sample-question-text">
-                    <b>How are you doing?</b>
-                </p>
-            </div>
-
-            <nav class="navbar">
-                <a href="graph.html" class="navitem">
-                    <p><i class="fa-solid fa-chart-line"></i></p>
-                </a>
-                <a href="index.html" class="navitem">
-                    <p><i class="fa-solid fa-house-user"></i></p>
-                </a>
-                <a href="feed.html" class="navitem">
-                    <p><i class="fa-solid fa-bars"></i></p>
-                </a>
-            </nav>
+        <div class="title">
+            <img src="https://i.postimg.cc/662n52Jv/deep-Question-Logo.png" class="image">
+        </div>
+        <div class="background">
+            <a href="answer.html" class="answerlink">
+                <div class="sample-question" >
+                    <p class="sample-question-text">
+                        <b>Today's reflection:</b>
+                    </p>
+                </div>
+            </a>
+                
+    
+                <nav class="navbar">
+                    <a href="graph.html" class="navitem">
+                        <p><i class="fa-solid fa-chart-line"></i></p>
+                    </a>
+                    <a href="index.html" class="navitem active">
+                        <p><i class="fa-solid fa-house-user"></i></p>
+                    </a>
+                    <a href="feed.html" class="navitem" >
+                        <p><i class="fa-solid fa-bars"></i></p>
+                    </a>
+                </nav>
+        </div>
+        
 
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>

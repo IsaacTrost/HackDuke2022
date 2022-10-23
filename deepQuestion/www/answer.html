@@ -29,43 +29,68 @@
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
         <script src="https://kit.fontawesome.com/e1a8cf2c63.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/slide-to-submit.css">
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="js/slide-to-submit.js"></script>
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/graph.css">
+        <link rel="stylesheet" href="css/answer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
         <title>deepQuestion</title>
     </head>
-    <body>
-        
-        <div class = "graph-switch1" id="switch">
-            <button id="weekbtn" class="graphbtn">week</button>
-            <button id="monthbtn" class="graphbtn">month</button>
-            <button id="yearbtn" class="graphbtn">year</button>
-        </div>
-        <div class = "graph-wrapper">
-            <div class="graph-div">
-                <canvas id="graph" width="1032" height="1000"></canvas>
+    <body>  
+        <p class="sample-question-text1">
+            Today's
+        </p>
+        <img src="https://i.postimg.cc/662n52Jv/deep-Question-Logo.png" class="image">
+        <div class="background">
+            <div class="sample-question" >
+                
+                <p class="sample-question-text">
+                    <b>How are you doing?</b>
+                </p>
             </div>
 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script>
+                setTimeout(function() {
+  $('#hide').show()
+}, 30000);
+
+setTimeout(function() {
+  $('#shown').hide()
+}, 30000);
+            </script>
+
+<p id="shown"> Your reflection will be ready in <b><span id="countdowntimer">30 </span></b> seconds. Take this time to read and think about today's question.</p>
+
+<script type="text/javascript">
+    var timeleft = 30;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
+            <div id="hide" style="display:none">
+                <form class="answerformoutside" method="post" id="form-demo" action="index.html">
+                    <textarea type="paragraph-text" class="answerform" placeholder="Write your answer here..." rows="10"></textarea>
+
+    <button class="submit"><b>Reflect</b></button>
+                </form>
+            </div>
+                
         </div>
-            <nav class="navbar">
-                <a href="graph.html" class="navitem active">
-                    <p><i class="fa-solid fa-chart-line"></i></p>
-                </a>
-                <a href="index.html" class="navitem">
-                    <p><i class="fa-solid fa-house-user"></i></p>
-                </a>
-                <a href="feed.html" class="navitem">
-                    <p><i class="fa-solid fa-bars"></i></p>
-                </a>
-            </nav>
-    </body>
+
+                
+
         <script src="cordova.js"></script>
-        <script type="module" src="js/graph.js"></script>
-        <script src="js/chart.js"></script>
+        <script src="js/index.js"></script>
+
     </body>
 </html>

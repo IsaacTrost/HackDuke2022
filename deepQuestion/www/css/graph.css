@@ -98,18 +98,22 @@ h1 {
     }
 }
 
-.sample-question {
-    border-radius: 25px;
-    box-shadow: 0px 0px 50px -16px #3BA0F9;
-    display: flex;
-    padding-left: 10%;
-    padding-right: 10%;
+.graph-wrapper{
+    align-items: row;
+}
+.graph-div {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    width:90%;
+    background-color: transparent;
+}
+
+.background {
+    border-top: 1px solid #928f8f;
+    background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
+    height: 100%;
     padding-top: 5%;
-    padding-bottom: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
-    background-color: white;
 }
 
 .sample-question {
@@ -125,6 +129,7 @@ h1 {
     width:100%;
     padding-bottom: 20px;
     background-color: #3BA0F9;
+    align-items: stretch;
 }
 
 .navitem {
@@ -134,5 +139,61 @@ h1 {
     text-align: center;
     text-decoration: none;
     font-size: 28px;
-    color: white;
+    color: #F0F8FF;
+}
+
+.graph-switch1 {
+    background-image: radial-gradient(circle at 16.66% 50%, #3BA0F9, #F0F8FF);
+    height: 35px;
+    border-radius: 20px;
+    margin: 0%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.graph-switch2 {
+    background-image: radial-gradient(circle at 50% 50%, #3BA0F9, #F0F8FF);
+    height: 35px;
+    border-radius: 20px;
+    margin: 0%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.graph-switch3 {
+    background-image: radial-gradient(circle at 83.33% 50%, #3BA0F9, #F0F8FF);
+    height: 35px;
+    border-radius: 20px;
+    margin: 0%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.graph-switch1 > button {
+    background-color: #F0F8FF;
+    border-width: 0px;
+    border-radius: 15px;
+
+}
+
+.graph-switch2 > button {
+    background-color: #F0F8FF;
+    border-width: 0px;
+    border-radius: 15px;
+
+}
+
+.graph-switch3 > button {
+    background-color: #F0F8FF;
+    border-width: 0px;
+    border-radius: 15px;
+
+}
+
+.active{
+    color: #FFFFFF;
+    border-top: 6px solid  #e3eef8
 }
