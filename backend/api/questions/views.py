@@ -6,7 +6,6 @@ from questions.models import UserModel, QuestionModel, AnswerModel
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from questions.serializers import UserSerializer, QuestionSerializer, AnswerSerializer
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.core import serializers
