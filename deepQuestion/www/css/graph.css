@@ -166,7 +166,8 @@ h1 {
     background-color: #F0F8FF;
     border-width: 0px;
     border-radius: 15px;
-
+    border-top: 3px solid rgba(59,160,249, 1);
+    border-bottom: 3px solid rgba(59,160,249, 1);
 }
 
 .not-selected {

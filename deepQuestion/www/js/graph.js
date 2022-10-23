@@ -34,10 +34,10 @@ gradient.addColorStop(1, 'rgba(20,100,256,1)');
 const myChart = new Chart(ct1, {
     type: 'bar',
     data: {
-        labels: ['1','2','3','4','5','6','7','8','9','10','11','12', '13'],
+        labels: ['Sunday','Monday','Tuesday','Wednsday','Thursday','Friday','Saturday'],
         datasets: [{
             label: 'contentness expressed',
-            data: [99,98, 45, 87, 67, 41, 34, 56, 99, 78, 3, 75, 24, 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,],
+            data: [50,55, 68, 61, 67, 41, 85],
             borderRadius: 6,
             backgroundColor: gradient,
             barPercentage: .95
@@ -73,10 +73,10 @@ const ct2 = document.getElementById('graph2').getContext('2d');
 const myChart2 = new Chart(ct2, {
     type: 'bar',
     data: {
-        labels: ['Contentment Today', 'Average This Week', 'Average This Month', 'Average This'],
+        labels: ['Contentment Today', 'Average This Week', 'Average This Month', 'Average This year'],
         datasets: [{
             label: 'contentness expressed',
-            data: [99,98, 45, 87],
+            data: [99,98, 45, 73],
             borderRadius: 6,
             backgroundColor: 'rgba(59,160,249, 1)',
             barPercentage: .95
@@ -114,25 +114,37 @@ const montheo = document.getElementById("monthbtn")
 const weekeo = document.getElementById("weekbtn")
 const yeareo = document.getElementById("yearbtn")
 
-function monthclick(){
+function weekclick(){
     wrapper.className = "graph-switch centery"
-    myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+    myChart.data.labels = ['Sunday','Monday','Tuesday','Wednsday','Thursday','Friday','Saturday'];
+    myChart.data.datasets[0].data=[50,55, 68, 61, 67, 41, 85]
     myChart.update()
+    montheo.className = "graphbtn not-selected"
+    yeareo.className = "graphbtn not-selected"
+    weekeo.className = "graphbtn "
+}
+function monthclick(){
+    wrapper.className = "graph-switch lefty"
+    myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+    myChart.data.datasets[0].data= [13,34, 56,25,48,14,49,25,34,54,65,67,34,34,67,12,45,56,57,18,12,45,56,50,55, 68, 61, 67, 41, 85]
+    myChart.update();
     montheo.className = "graphbtn "
     yeareo.className = "graphbtn not-selected"
     weekeo.className = "graphbtn not-selected"
 }
-function weekclick(){
-    wrapper.className = "graph-switch lefty"
-    myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
-    myChart.update();
-    montheo.className = "graphbtn not-selected"
-    yeareo.className = "graphbtn not-selected"
-    weekeo.className = "graphbtn"
-}
 function yearclick(){
     wrapper.className = "graph-switch righty"
-    myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+    let arrayo = []
+    for (let x=1; x<366; x++) {
+        arrayo.push(x)
+    }
+    let datum=[]
+    while (datum.length<336){
+        datum.push(Math.floor(Math.random()*50+datum.length/7.4))
+    }
+    datum.concat([13,34, 56,25,48,14,49,25,34,54,65,67,34,34,67,12,45,56,57,18,12,45,56,50,55, 68, 61, 67, 41, 85])
+    myChart.data.labels = arrayo;
+    myChart.data.datasets[0].data= datum;
     myChart.update()
     montheo.className = "graphbtn not-selected"
     yeareo.className = "graphbtn"
