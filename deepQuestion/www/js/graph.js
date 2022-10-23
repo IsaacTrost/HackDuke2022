@@ -118,16 +118,25 @@ function monthclick(){
     wrapper.className = "graph-switch centery"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
+    montheo.className = "graphbtn "
+    yeareo.className = "graphbtn not-selected"
+    weekeo.className = "graphbtn not-selected"
 }
 function weekclick(){
     wrapper.className = "graph-switch lefty"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
-    myChart.update()
+    myChart.update();
+    montheo.className = "graphbtn not-selected"
+    yeareo.className = "graphbtn not-selected"
+    weekeo.className = "graphbtn"
 }
 function yearclick(){
     wrapper.className = "graph-switch righty"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
+    montheo.className = "graphbtn not-selected"
+    yeareo.className = "graphbtn"
+    weekeo.className = "graphbtn not-selected"
 }
 montheo.addEventListener("click", monthclick)
 weekeo.addEventListener("click", weekclick)

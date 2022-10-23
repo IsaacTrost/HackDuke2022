@@ -142,9 +142,9 @@ h1 {
 }
 
 .graph-switch {
-    height: 35px;
-    margin-left: 5px;
-    margin-right: 5px;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin: 0%; 
     display: flex;
     justify-content: space-around;
@@ -152,25 +152,30 @@ h1 {
 }
 
 .lefty {
-    background-image: radial-gradient(circle at 16.66% 50%, #3BA0F9, #F0F8FF);
+    background-image: radial-gradient(circle at 16.66% 50%, rgba(20,100,256,1), rgba(59,160,249, 1));
 }
 
 .centery {
-    background-image: radial-gradient(circle at 50% 50%, #3BA0F9, #F0F8FF);
+    background-image: radial-gradient(circle at 50% 50%, rgba(20,100,256,1), rgba(59,160,249, 1));
 }
 
 .righty {
-    background-image: radial-gradient(circle at 83.33% 50%, #3BA0F9, #F0F8FF);
+    background-image: radial-gradient(circle at 83.33% 50%, rgba(20,100,256,1), rgba(59,160,249, 1));
 }
-.graph-switch > button {
+.graphbtn {
     background-color: #F0F8FF;
     border-width: 0px;
     border-radius: 15px;
 
 }
 
+.not-selected {
+    background-color: transparent;
+    color: #FFFFFF
+}
+
 .active{
-    color: #FFFFFF;
+    color: #F0F8FF ;
     border-top: 6px solid  transparent;
 }
 

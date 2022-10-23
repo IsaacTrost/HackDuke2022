@@ -20,15 +20,31 @@
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 
-const form = document.getElementById('form-demo');
-const formData = new FormData(form);
-
-for (const [key, value] of formData) {
-  alert("HI")
-}
-
 //My method ig??
 function getData() {
   var content = document.getElementById("textmike").value;
+  var data = {}
+  data["question"] = document.getElementsByClassName("sample-question-text").innerText;
+  data["date"] = new Date().toLocaleString();
+  data["content"] = content;
+  data["tone"] = Math.floor(Math.random()*100);
+  let xhr = new XMLHttpRequest();
+  let url = "http://20.163.193.221:8000/answers/"
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(data));
   return content;
 }
+
+async function populate() {
+    let today_question = document.getElementsByClassName("sample-question-text")
+
+    const request = new Request("http://20.163.193.221:8000/questions/");
+
+    const response = await fetch(request);
+    const todaysquestion = await response.json()[0];
+
+    today_question.innerText = todaysquestion
+}
+
+populate()

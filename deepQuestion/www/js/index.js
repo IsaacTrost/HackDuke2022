@@ -27,17 +27,21 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 }
+async function populate() {
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    const request = new Request(requestURL);
 
-const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-const request = new Request(requestURL);
+    const response = await fetch(request);
+    const othersAnswers = await response.json();
 
-const response = await fetch(request);
-const othersAnswers = await response.json();
 
-for (x=0; x<4; x++) {
-    console.log(otherAnswers[x])
-    var question = document.getElementById("question"+x)
-    var answer = document.getElementById("answer"+x)
-    question.innerText = otherAnswers[x]["question"]
-    answer.innerText = otherAnswers[x]["answer"]
+    for (x=0; x<4; x++) {
+        console.log(othersAnswers[x])
+        var question = document.getElementById("question"+x)
+        var answer = document.getElementById("answer"+x)
+        question.innerText = othersAnswers[x]["question"]
+        answer.innerText = othersAnswers[x]["answer"]
+    }
 }
+
+populate()
