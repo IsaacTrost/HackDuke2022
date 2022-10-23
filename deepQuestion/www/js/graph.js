@@ -73,7 +73,7 @@ const ct2 = document.getElementById('graph2').getContext('2d');
 const myChart2 = new Chart(ct2, {
     type: 'bar',
     data: {
-        labels: ['contentment today', 'average this week', 'average this month', 'average this'],
+        labels: ['Contentment Today', 'Average This Week', 'Average This Month', 'Average This'],
         datasets: [{
             label: 'contentness expressed',
             data: [99,98, 45, 87],
