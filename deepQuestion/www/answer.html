@@ -66,7 +66,7 @@ setTimeout(function() {
 }, 30000);
             </script>
 
-<p id="shown"> Today's reflection will be ready in <b><span id="countdowntimer">30 </span></b> seconds. Take a moment to pause and think about today's question.</p>
+<p id="shown"> Your reflection will be ready in <b><span id="countdowntimer">30 </span></b> seconds. Take this time to read and think about today's question.</p>
 
 <script type="text/javascript">
     var timeleft = 30;
@@ -78,8 +78,8 @@ setTimeout(function() {
     },1000);
 </script>
             <div id="hide" style="display:none">
-                <form class="answerformoutside" method="post" id="form-demo" action="feed.html">
-                    <textarea type="paragraph-text" class="answerform" placeholder="Write your answer here..." rows="10" maxlength="350"></textarea>
+                <form class="answerformoutside" method="post" id="form-demo">
+                    <textarea type="paragraph-text" class="answerform" placeholder="Write your answer here..." rows="10"></textarea>
 
     <button class="submit"><b>Reflect</b></button>
                 </form>
@@ -88,9 +88,8 @@ setTimeout(function() {
         </div>
 
                 
-
         <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+        <script type="module" src="js/answer.js"></script>
 
     </body>
 </html>

@@ -20,6 +20,13 @@
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 import "./chart.js";
+async function getText(file) {
+    let myObject = await fetch(file);
+    let myText = await myObject.text();
+    myDisplay(myText);
+}
+
+
 const ct1 = document.getElementById('graph').getContext('2d');
 var gradient = ct1.createLinearGradient(0, 0, 0, 400);
 gradient.addColorStop(0, 'rgba(59,160,249, 1)');   
