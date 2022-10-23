@@ -28,6 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+        <script src="https://kit.fontawesome.com/e1a8cf2c63.js" crossorigin="anonymous"></script>
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -48,17 +49,16 @@
 
             <nav class="navbar">
                 <a href="graph.html" class="navitem">
-                    <p>Graph</p>
+                    <p><i class="fa-solid fa-chart-line"></i></p>
                 </a>
                 <a href="index.html" class="navitem">
-                    <p>Home</p>
+                    <p><i class="fa-solid fa-house-user"></i></p>
                 </a>
                 <a href="feed.html" class="navitem">
-                    <p>Feed</p>
+                    <p><i class="fa-solid fa-bars"></i></p>
                 </a>
             </nav>
 
-    </body>
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>

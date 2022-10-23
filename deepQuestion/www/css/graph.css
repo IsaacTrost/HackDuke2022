@@ -123,8 +123,8 @@ h1 {
     bottom: 0;
     position: fixed;
     width:100%;
-    font-weight: 3;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    background-color: #3BA0F9;
 }
 
 .navitem {
@@ -132,4 +132,7 @@ h1 {
     float: left;
     width: 33%;
     text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: white;
 }
