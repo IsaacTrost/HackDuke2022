@@ -41,12 +41,9 @@
         <title>deepQuestion</title>
     </head>
     <body>
-            <div class="sample-question" >
-                <p class="sample-question-text">
-                    <b>AAAAAAAAAA (this might be a graph)</b>
-                </p>
+            <div class="sample-question">
+                <canvas id="myChart" width="1032" height="400"></canvas>
             </div>
-
             <nav class="navbar">
                 <a href="graph.html" class="navitem">
                     <p><i class="fa-solid fa-chart-line"></i></p>
@@ -58,9 +55,9 @@
                     <p><i class="fa-solid fa-bars"></i></p>
                 </a>
             </nav>
-
     </body>
         <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+        <script type="module" src="js/graph.js"></script>
+        <script src="js/chart.js"></script>
     </body>
 </html>
