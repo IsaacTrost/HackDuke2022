@@ -21,6 +21,9 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 import "./chart.js";
 const ctx = document.getElementById('myChart').getContext('2d');
+var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, 'rgba(59,160,249, 1)');   
+gradient.addColorStop(1, 'rgba(20,100,256,1)');
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -28,15 +31,34 @@ const myChart = new Chart(ctx, {
         datasets: [{
             label: 'contentness expressed',
             data: [99,98, 45, 87, 67, 41, 34, 56, 99, 78, 3, 75, 24],
-            borderRadius: 7
+            borderRadius: 6,
+            backgroundColor: gradient,
+            barPercentage: .95
+            
         }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
+        plugins:{
+            legend: {
+                display: false,
             }
+        },
+        scales: {
+            x: {
+                grid: {
+                  display: false
+                }
+              },
+              y: {
+                beginAtZero: true,
+                display: false,
+                grid: {
+                  display: false
+                }
+              }
         }
-    }
+        
+    },
+
 });
 
