@@ -21,8 +21,7 @@ from questions.views import UserViewSet, QuestionViewSet, AnswerViewSet
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'questions', QuestionViewSet)
-router.register(r'answers', AnswerViewSet)
-
+router.register(r'answers', AnswerViewSet) 
 
 urlpatterns = [
     path('', include(router.urls)),

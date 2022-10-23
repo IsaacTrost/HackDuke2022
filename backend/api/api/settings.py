@@ -34,6 +34,8 @@ ALLOWED_HOSTS = SECRETS['allowed_hosts']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = SECRETS['debug']
 
+STATIC_ROOT = 'static/'
+
 # Application definition
 
 INSTALLED_APPS = [
