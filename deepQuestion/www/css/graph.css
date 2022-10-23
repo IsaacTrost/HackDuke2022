@@ -109,6 +109,13 @@ h1 {
     background-color: transparent;
 }
 
+.background {
+    border-top: 1px solid #928f8f;
+    background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
+    height: 100%;
+    padding-top: 5%;
+}
+
 .sample-question {
     text-align: left;
     font-size:24px;
@@ -122,6 +129,7 @@ h1 {
     width:100%;
     padding-bottom: 20px;
     background-color: #3BA0F9;
+    align-items: stretch;
 }
 
 .navitem {
@@ -131,7 +139,7 @@ h1 {
     text-align: center;
     text-decoration: none;
     font-size: 28px;
-    color: white;
+    color: #F0F8FF;
 }
 
 .graph-switch1 {
@@ -183,4 +191,9 @@ h1 {
     border-width: 0px;
     border-radius: 15px;
 
+}
+
+.active{
+    color: #FFFFFF;
+    border-top: 6px solid  #e3eef8
 }
