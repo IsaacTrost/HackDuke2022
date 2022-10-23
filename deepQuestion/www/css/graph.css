@@ -127,7 +127,6 @@ h1 {
     bottom: 0;
     position: fixed;
     width:100%;
-    padding-bottom: 20px;
     background-color: #3BA0F9;
     align-items: stretch;
 }
@@ -142,51 +141,27 @@ h1 {
     color: #F0F8FF;
 }
 
-.graph-switch1 {
+.graph-switch {
+    height: 35px;
+    border-radius: 20px;
+    margin: 0%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.lefty {
     background-image: radial-gradient(circle at 16.66% 50%, #3BA0F9, #F0F8FF);
-    height: 35px;
-    border-radius: 20px;
-    margin: 0%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
 
-.graph-switch2 {
+.centery {
     background-image: radial-gradient(circle at 50% 50%, #3BA0F9, #F0F8FF);
-    height: 35px;
-    border-radius: 20px;
-    margin: 0%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
 
-.graph-switch3 {
+.righty {
     background-image: radial-gradient(circle at 83.33% 50%, #3BA0F9, #F0F8FF);
-    height: 35px;
-    border-radius: 20px;
-    margin: 0%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
-
-.graph-switch1 > button {
-    background-color: #F0F8FF;
-    border-width: 0px;
-    border-radius: 15px;
-
-}
-
-.graph-switch2 > button {
-    background-color: #F0F8FF;
-    border-width: 0px;
-    border-radius: 15px;
-
-}
-
-.graph-switch3 > button {
+.graph-switch > button {
     background-color: #F0F8FF;
     border-width: 0px;
     border-radius: 15px;
@@ -196,4 +171,8 @@ h1 {
 .active{
     color: #FFFFFF;
     border-top: 6px solid  #e3eef8
+}
+
+.activeactive {
+    box-shadow: 0px 0px 50px -16px #7e8184;
 }

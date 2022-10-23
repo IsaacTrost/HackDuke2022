@@ -61,23 +61,64 @@ const myChart = new Chart(ct1, {
     },
 
 });
+
+const ct2 = document.getElementById('graph2').getContext('2d');
+const myChart2 = new Chart(ct2, {
+    type: 'bar',
+    data: {
+        labels: ['contentment today', 'average this week', 'average this month', 'average this'],
+        datasets: [{
+            label: 'contentness expressed',
+            data: [99,98, 45, 87],
+            borderRadius: 6,
+            backgroundColor: 'rgba(59,160,249, 1)',
+            barPercentage: .95
+            
+        }]
+    },
+    options: {
+        plugins:{
+            legend: {
+                display: false,
+            }
+        },
+        indexAxis: 'y',
+        scales: {
+            x: {
+                grid: {
+                  display: false
+                },
+                display: false
+              },
+              y: {
+                beginAtZero: true,
+                grid: {
+                  display: false
+                }
+              }
+        }
+        
+    },
+
+});
+
 const wrapper = document.getElementById("switch")
 const montheo = document.getElementById("monthbtn")
 const weekeo = document.getElementById("weekbtn")
 const yeareo = document.getElementById("yearbtn")
 
 function monthclick(){
-    wrapper.className = "graph-switch2"
+    wrapper.className = "graph-switch centery"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
 }
 function weekclick(){
-    wrapper.className = "graph-switch1"
+    wrapper.className = "graph-switch lefty"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
 }
 function yearclick(){
-    wrapper.className = "graph-switch3"
+    wrapper.className = "graph-switch righty"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
 }
