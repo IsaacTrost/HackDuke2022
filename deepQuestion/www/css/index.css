@@ -168,7 +168,7 @@ h1 {
 
 .active{
     color: #FFFFFF;
-    border-top: 6px solid  #e3eef8
+    border-top: 6px solid  transparent;
 }
 
 .activeactive {
@@ -203,3 +203,13 @@ h1 {
     border-bottom: 1px solid #928f8f;
     padding-bottom: 1%;
 }
+
+.sample-question .badge {
+    position: absolute;
+    top: 170px;
+    right: 35px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+  }

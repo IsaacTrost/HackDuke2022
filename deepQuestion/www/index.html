@@ -43,12 +43,19 @@
         <div class="title">
             <img src="https://i.postimg.cc/662n52Jv/deep-Question-Logo.png" class="image">
         </div>
+        <script>
+function myFunction() {
+  var x = document.getElementById("crazyid");
+  x.style.display = "none";
+}
+        </script>
         <div class="background">
-            <a href="answer.html" class="answerlink">
-                <div class="sample-question" >
+            <a href="answer.html" class="answerlink" onclick="notification()">
+                <div class="sample-question" id="crazyid">
                     <p class="sample-question-text">
                         <b>Today's reflection:</b>
                     </p>
+                    <span class="badge" id="crazyid"><b>1</b></span>
                 </div>
             </a>
             <div class="past-question-title">
@@ -100,7 +107,7 @@
                 </nav>
         </div>
         
-
+        
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>

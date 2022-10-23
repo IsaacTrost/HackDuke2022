@@ -170,7 +170,7 @@ h1 {
 
 .active{
     color: #FFFFFF;
-    border-top: 6px solid  #e3eef8
+    border-top: 6px solid  transparent;
 }
 
 .activeactive {
