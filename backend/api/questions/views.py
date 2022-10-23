@@ -20,6 +20,13 @@ class QuestionViewSet(viewsets.ModelViewSet):
     queryset = QuestionModel.objects.all()
     serializer_class = QuestionSerializer
 
+    @action(methods=["get"], detail=False)
+    def daily_question(self, request):
+        queryset = QuestionModel.objects.all()
+        return Response(queryset.last().question)
+
+
+
 class AnswerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows answers to be viewed or edited.
