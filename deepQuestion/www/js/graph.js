@@ -61,28 +61,28 @@ const myChart = new Chart(ct1, {
     },
 
 });
-const wrapper = document.getElementsByName("graph-switch")
+const wrapper = document.getElementById("switch")
 const montheo = document.getElementById("monthbtn")
 const weekeo = document.getElementById("weekbtn")
 const yeareo = document.getElementById("yearbtn")
 
 function monthclick(){
-    wrapper.style.backgroundImage="radial-gradient(circle at 50% 50%, #3BA0F9, #F0F8FF);"
+    wrapper.className = "graph-switch2"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
 }
 function weekclick(){
-    wrapper.style.backgroundImage="radial-gradient(circle at 16.666% 50%, #3BA0F9, #F0F8FF);"
+    wrapper.className = "graph-switch1"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
 }
 function yearclick(){
-    wrapper.style.backgroundImage="radial-gradient(circle at 83.333% 50%, #3BA0F9, #F0F8FF);"
+    wrapper.className = "graph-switch3"
     myChart.data.labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     myChart.update()
 }
 montheo.addEventListener("click", monthclick)
-montheo.addEventListener("click", weekclick)
-montheo.addEventListener("click", yearclick)
+weekeo.addEventListener("click", weekclick)
+yeareo.addEventListener("click", yearclick)
 
 
