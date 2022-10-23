@@ -141,51 +141,27 @@ h1 {
     color: #F0F8FF;
 }
 
-.graph-switch1 {
+.graph-switch {
+    height: 35px;
+    border-radius: 20px;
+    margin: 0%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.lefty {
     background-image: radial-gradient(circle at 16.66% 50%, #3BA0F9, #F0F8FF);
-    height: 35px;
-    border-radius: 20px;
-    margin: 0%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
 
-.graph-switch2 {
+.centery {
     background-image: radial-gradient(circle at 50% 50%, #3BA0F9, #F0F8FF);
-    height: 35px;
-    border-radius: 20px;
-    margin: 0%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
 
-.graph-switch3 {
+.righty {
     background-image: radial-gradient(circle at 83.33% 50%, #3BA0F9, #F0F8FF);
-    height: 35px;
-    border-radius: 20px;
-    margin: 0%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
-
-.graph-switch1 > button {
-    background-color: #F0F8FF;
-    border-width: 0px;
-    border-radius: 15px;
-
-}
-
-.graph-switch2 > button {
-    background-color: #F0F8FF;
-    border-width: 0px;
-    border-radius: 15px;
-
-}
-
-.graph-switch3 > button {
+.graph-switch > button {
     background-color: #F0F8FF;
     border-width: 0px;
     border-radius: 15px;
