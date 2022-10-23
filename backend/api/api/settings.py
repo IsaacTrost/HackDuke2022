@@ -10,23 +10,32 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+# Taken from StackOverflow :)
+# Allows usage credentials from a secrets file
+
+import json
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    with open(os.path.join(BASE_DIR, '../secrets.json')) as handle:
+        SECRETS = json.load(handle)
+except IOError:
+    SECRETS = {}
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2%1k#p#_7hcyi2nlrw8pna70)x)ee1ar15!jeoyj83f15=4cj)'
-
+SECRET_KEY = SECRETS['secret_key']
+ALLOWED_HOSTS = SECRETS['allowed_hosts']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+DEBUG = SECRETS['debug']
 
 # Application definition
 
@@ -76,8 +85,16 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django_cockroachdb', # CockroachDB
+        'NAME': SECRETS['db_name'],
+        'USER': SECRETS['db_user'],
+        'PASSWORD': SECRETS['db_pass'],
+        'HOST': SECRETS['db_host'],
+        'PORT': SECRETS['db_port'],
+        'OPTIONS': {
+            'sslmode': 'verify-full',
+            'options': '--cluster=' + SECRETS['cluster']
+        },
     }
 }
 
@@ -106,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
