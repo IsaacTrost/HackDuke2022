@@ -21,12 +21,9 @@
 }
 
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color: #F0F8FF;
     background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
-    font-family: system-ui, -apple-system, -apple-system-font, 'SF Pro';
+    font-family: 'Nunito', sans-serif;
     height:100vh;
     margin:0px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
@@ -115,6 +112,39 @@ h1 {
 .sample-question {
     text-align: left;
     font-size:24px;
-    font-weight: 3;
-    color: #3e3d3d
+    font-weight: 600;
+    color: #5e5b5b
 }
+
+.form-popup {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    padding: 10%;
+    background-color: white;
+  }
+
+  .form-container input[type=text] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid blue;
+    background: white;
+    border-radius: 0px;
+    margin-right:10%;
+
+  }
+
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    margin-right:10%;
+    opacity: 0.8;
+  }
