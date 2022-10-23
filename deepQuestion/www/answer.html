@@ -78,16 +78,16 @@ setTimeout(function() {
     },1000);
 </script>
             <div id="hide" style="display:none">
-                <form class="answerformoutside" method="post" id="form-demo">
-                    <textarea type="paragraph-text" class="answerform" placeholder="Write your answer here..." rows="10"></textarea>
+                <form class="answerformoutside" method="post" id="form-demo" action="feed.html">
+                    <textarea type="paragraph-text" class="answerform" placeholder="Write your answer here..." rows="10" id="textmike"></textarea>
 
-    <button class="submit"><b>Reflect</b></button>
+    <button class="submit" onclick="getData()"><b>Reflect</b></button>
                 </form>
             </div>
                 
         </div>
 
-                
+        <script src="answer.js"></script>
         <script src="cordova.js"></script>
         <script type="module" src="js/answer.js"></script>
 

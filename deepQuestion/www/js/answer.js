@@ -26,3 +26,9 @@ const formData = new FormData(form);
 for (const [key, value] of formData) {
   alert("HI")
 }
+
+//My method ig??
+function getData() {
+  var content = document.getElementById("textmike").value;
+  return content;
+}
