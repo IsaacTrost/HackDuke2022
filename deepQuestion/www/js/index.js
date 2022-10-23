@@ -19,6 +19,8 @@
 
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
+
+
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
@@ -27,3 +29,16 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 }
+
+window.mySwipe = new Swipe(document.getElementById('slider'), {
+    startSlide: 0,
+    speed: 500,
+    auto: 3000,
+    draggable: true,
+    continuous: false,
+    disableScroll: true,
+    stopPropagation: true,
+    ignore: ".scroller",
+    callback: function(index, elem, dir) {},
+    transitionEnd: function(index, elem) {}
+  });
