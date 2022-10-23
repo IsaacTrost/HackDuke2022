@@ -40,22 +40,27 @@
         <title>deepQuestion</title>
     </head>
     <body>
-        
-        
-        <div class = "graph-wrapper">
-            <div class="graph-div">
-                <canvas id="graph" width="1032" height="1000"></canvas>
+        <div class="title">
+            <img src="https://i.postimg.cc/662n52Jv/deep-Question-Logo.png" class="image">
+        </div>
+        <div class="background">
+            <div class = "graph-wrapper">
+                <div class="graph-div">
+                    <canvas id="graph" width="1032" height="1000"></canvas>
+                </div>
+    
             </div>
-
+            <div class = "graph-switch lefty" id="switch">
+                <button id="weekbtn" class="graphbtn">Week</button>
+                <button id="monthbtn" class="graphbtn">Month</button>
+                <button id="yearbtn" class="graphbtn">Year</button>
+            </div>
+            <div class="graph-div">
+                <canvas id="graph2" width="1032" height="600"></canvas>
+            </div>
         </div>
-        <div class = "graph-switch lefty" id="switch">
-            <button id="weekbtn" class="graphbtn">Week</button>
-            <button id="monthbtn" class="graphbtn">Month</button>
-            <button id="yearbtn" class="graphbtn">Year</button>
-        </div>
-        <div class="graph-div">
-            <canvas id="graph2" width="1032" height="600"></canvas>
-        </div>
+        
+        
             <nav class="navbar">
                 <a href="graph.html" class="navitem activeactive">
                     <p><i class="fa-solid fa-chart-line"></i></p>
