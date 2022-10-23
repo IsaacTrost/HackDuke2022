@@ -24,8 +24,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color: #F0F8FF;
-    background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
+    background-color: white;
     font-family: 'Nunito', sans-serif;
     height:100vh;
     margin:0px;
@@ -103,20 +102,22 @@ h1 {
     display: flex;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 0%;
-    padding-bottom: 0%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10%;
-    background-color: white;
-    box-shadow: 0px 0px 50px -16px #3BA0F9;
+    color: white;
+    background-color: #3BA0F9;
+    box-shadow: 0px 0px 50px -16px #7e8184;
+    text-align: center;
 }
 
-.sample-question {
-    text-align: left;
-    font-size:24px;
+.sample-question-text {
+    text-align: center;
+    font-size:18px;
     font-weight: 3;
-    color: #3e3d3d
+    width: 100%;
 }
 
 .navbar {
@@ -140,4 +141,23 @@ h1 {
 
 .answerlink {
     text-decoration: none;
+}
+
+.background {
+    border-top: 1px solid #928f8f;
+    background-image:linear-gradient(to bottom, #F0F8FF 0%, #e3eef8 51%);
+    height: 100%;
+    padding-top: 5%;
+}
+
+.title {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4%;
+}
+
+.image {
+    max-height: 35px;
+    margin-left: 26%;
 }
