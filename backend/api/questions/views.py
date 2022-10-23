@@ -33,3 +33,10 @@ class AnswerViewSet(viewsets.ModelViewSet):
     """
     queryset = AnswerModel.objects.all()
     serializer_class = AnswerSerializer
+
+    @action(methods=["get"], detail=False)
+    def all_daily_answers(self, request):
+        today = datetime.datetime.today()
+        queryset = AnswerModel.objects.filter(date__year=today.year, date__month=today.month, date__day=today.day).values()
+        return Response({"questions": list(queryset)})
+
