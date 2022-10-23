@@ -19,18 +19,15 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 try:
-    with open(os.path.join(BASE_DIR, 'secrets.json')) as handle:
+    with open(os.path.join(BASE_DIR, '../secrets.json')) as handle:
         SECRETS = json.load(handle)
 except IOError:
     SECRETS = {}
-
-SECRET_KEY = SECRETS['secret_key']
 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -88,12 +85,16 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # MariaDB
+        'ENGINE': 'django_cockroachdb', # CockroachDB
         'NAME': SECRETS['db_name'],
         'USER': SECRETS['db_user'],
-        'PASS': SECRETS['db_pass'],
+        'PASSWORD': SECRETS['db_pass'],
         'HOST': SECRETS['db_host'],
         'PORT': SECRETS['db_port'],
+        'OPTIONS': {
+            'sslmode': 'verify-full',
+            'options': '--cluster=' + SECRETS['cluster']
+        },
     }
 }
 
@@ -122,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
