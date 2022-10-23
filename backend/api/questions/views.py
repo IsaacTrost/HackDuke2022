@@ -1,9 +1,15 @@
+from re import A
 from django.shortcuts import render
 
+import datetime
 from questions.models import UserModel, QuestionModel, AnswerModel
 from rest_framework import viewsets
-from rest_framework import permissions
+from rest_framework.decorators import action
 from questions.serializers import UserSerializer, QuestionSerializer, AnswerSerializer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.core import serializers
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -11,7 +17,6 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = UserModel.objects.all()
     serializer_class = UserSerializer
-
 
 class QuestionViewSet(viewsets.ModelViewSet):
     """
@@ -24,7 +29,7 @@ class QuestionViewSet(viewsets.ModelViewSet):
     def daily_question(self, request):
         queryset = QuestionModel.objects.all()
         return Response(queryset.last().question)
-
+    
 
 
 class AnswerViewSet(viewsets.ModelViewSet):
