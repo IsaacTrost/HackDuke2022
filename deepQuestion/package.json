@@ -20,8 +20,10 @@
   "cordova": {
     "platforms": [
       "android",
-      "electron",
-      "ios"
+      "electron"
     ]
+  },
+  "dependencies": {
+    "swipejs": "^2.3.1"
   }
 }
